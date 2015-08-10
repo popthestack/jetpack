@@ -24,7 +24,7 @@
 					<p><?php echo sprintf( __( 'Check out other recommended features below, or go to the <a href="%s">settings</a> page to customize your Jetpack experience.', 'jetpack' ), admin_url( 'admin.php?page=jetpack_modules' ) ); ?></p>
 				</div><!-- /.jumpstart-message -->
 				<div id="jumpstart-cta" class="j-col j-sm-12 j-md-12 j-lrg-4">
-					<img class="jumpstart-spinner" style="margin: 0 auto; padding: 49px 0 14px; display: none;" width="17" src="<?php echo esc_url( plugins_url( 'images/wpspin_light-2x.gif', JETPACK__PLUGIN_FILE) ); ?>" alt="Loading ..." />
+					<img class="jumpstart-spinner" style="margin: 49px auto 14px; display: none;" width="17" height="17" src="<?php echo esc_url( plugins_url( 'images/wpspin_light-2x.gif', JETPACK__PLUGIN_FILE) ); ?>" alt="Loading ..." />
 					<a id="jump-start" class="button-primary" ><?php esc_html_e( 'Jump Start', 'jetpack' ); ?></a>
 					<a class="dismiss-jumpstart pointer" ><?php esc_html_e( 'Skip', 'jetpack' ); ?></a>
 				</div>
