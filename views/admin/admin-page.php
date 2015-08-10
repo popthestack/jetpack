@@ -124,13 +124,19 @@
 
 					<div class="j-row goto">
 						<div class="feat j-col j-lrg-7 j-md-12 j-sm-7">
-							<?php $normalized_site_url = Jetpack::build_raw_urls( get_home_url() ); ?>
-							<a href="<?php echo esc_url( 'https://wordpress.com/plugins/' . $normalized_site_url ); ?>" class="button button-primary" target="_blank" title="<?php esc_attr_e( 'Go to WordPress.com to try these features', 'jetpack' ); ?>"><?php _e( 'Go to WordPress.com', 'jetpack' ); ?></a>
+							<?php
+								$normalized_site_url = Jetpack::build_raw_urls( get_home_url() );
+								$manage_active = Jetpack::is_module_active( 'manage' );
+							?>
+							<?php if ( $manage_active ) : ?>
+								<a href="<?php echo esc_url( 'https://wordpress.com/plugins/' . $normalized_site_url ); ?>" class="button button-primary" target="_blank" title="<?php esc_attr_e( 'Go to WordPress.com to try these features', 'jetpack' ); ?>"><?php _e( 'Go to WordPress.com', 'jetpack' ); ?></a>
+							<?php else : ?>
+								<input type="submit" disabled="disabled" name="manage-cta-disabled" id="manage-cta-disabled" class="button" value="<?php _e( 'Go to WordPress.com', 'jetpack' ); ?>" title="Set the primary account holder">
+							<?php endif; ?>
 						</div>
 						<div class="act j-col j-lrg-5 j-md-12 j-sm-5">
 							<div class="module-action">
 								<span>
-								<?php $manage_active = Jetpack::is_module_active( 'manage' ); ?>
 								<input class="is-compact form-toggle" type="checkbox" id="active-manage" <?php echo ( $manage_active ) ? 'checked' : ''; ?> />
 									<label class="form-toggle__label" for="active-manage">
 										<img class="module-spinner-manage" style="display: none;" width="16" height="16" src="<?php echo esc_url( plugins_url( 'images/wpspin_light-2x.gif', JETPACK__PLUGIN_FILE) ); ?>" alt="Loading ..." />
