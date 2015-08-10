@@ -123,15 +123,8 @@ class Jetpack_Landing_Page extends Jetpack_Admin_Page {
 				$module_name[] = $val['module_name'];
 			}
 		}
-		
-		$list_length = count( $module_name );
-		$jumpstart_module_list = "";
-
-		for ( $i = 0; $i <= $list_length-2; $i++ ) {
-			$jumpstart_module_list = $jumpstart_module_list . $module_name[$i] . ", ";
-		}
-
-		$jumpstart_module_list = $jumpstart_module_list . "and " . $module_name[$list_length-1];
+		$last_item = array_pop( $module_name );
+		$jumpstart_module_list = implode( $module_name, ', ' ) . ', and ' . $last_item;
 
 		return $jumpstart_module_list;
 	}
