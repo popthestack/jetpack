@@ -129,7 +129,7 @@
 								$manage_active = Jetpack::is_module_active( 'manage' );
 							?>
 							<a href="<?php echo esc_url( 'https://wordpress.com/plugins/' . $normalized_site_url . '?from=jpnux' ); ?>" class="button button-primary manage-cta-active" target="_blank" style="display: <?php echo ( $manage_active ) ? 'inline-block' : 'none'; ?>;" title="<?php esc_attr_e( 'Go to WordPress.com to try these features', 'jetpack' ); ?>"><?php _e( 'Go to WordPress.com', 'jetpack' ); ?></a>
-							<input type="submit" id="active-manage" class="button button-primary form-toggle manage-cta-inactive" style="display: <?php echo ( $manage_active ) ? 'none' : 'inline-block'; ?>;" value="<?php _e( 'Activate features', 'jetpack' ); ?>" title="<?php esc_attr_e( 'Activate free WordPress.com features', 'jetpack' ); ?>">
+							<label for="active-manage" class="button button-primary form-toggle manage-cta-inactive" style="display: <?php echo ( $manage_active ) ? 'none' : 'inline-block'; ?>" title="<?php esc_attr_e( 'Activate free WordPress.com features', 'jetpack' ); ?>"><?php _e( 'Activate features', 'jetpack' ); ?></label>
 						</div>
 						<div class="act j-col j-lrg-5 j-md-4 j-sm-5">
 							<div class="module-action">
