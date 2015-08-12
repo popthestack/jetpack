@@ -302,8 +302,8 @@
 					$( checkBox ).prop( 'checked', true );
 				});
 
-				$( '.jumpstart-spinner, .jstart, #jumpstart-cta' ).hide();
-				$( '.jumpstart-message, .miguel' ).toggle();
+				$( '.jumpstart-spinner, .jstart, #jumpstart-cta, .manage-cta-inactive' ).hide();
+				$( '.jumpstart-message, .miguel, .manage-cta-active' ).toggle();
 
 				// Log Jump Start event in MC Stats
 				new Image().src = data.jumpstartStatsURLS.jumpstarted;
