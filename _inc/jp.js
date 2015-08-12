@@ -304,6 +304,7 @@
 
 				$( '.jumpstart-spinner, .jstart, #jumpstart-cta, .manage-cta-inactive' ).hide();
 				$( '.jumpstart-message, .miguel, .manage-cta-active' ).toggle();
+				$( '#jump-start-area' ).delay( 5000 ).hide( 600 );
 
 				// Log Jump Start event in MC Stats
 				new Image().src = data.jumpstartStatsURLS.jumpstarted;
