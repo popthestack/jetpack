@@ -383,8 +383,10 @@
 					if ( 'manage' === data.thisModuleSlug ) {
 						if ( response.activated ) {
 							thisLabel.show().html( 'ACTIVE' );
+							$( '#manage-row' ).addClass( 'activated' );
 						} else {
 							thisLabel.show().html( 'INACTIVE' );
+							$( '#manage-row' ).removeClass( 'activated' );
 						}
 
 						$( '.manage-cta-inactive' ).toggle();
