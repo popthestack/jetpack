@@ -433,7 +433,7 @@ class Jetpack {
 		 * Do things that should run even in the network admin
 		 * here, before we potentially fail out.
 		 */
-		add_filter( 'jetpack_require_lib_dir', 		array( $this, 'require_lib_dir' ) );
+		add_filter( 'jetpack_require_lib_dir', array( $this, 'require_lib_dir' ) );
 
 		/*
 		 * Load things that should only be in Network Admin.
@@ -446,7 +446,7 @@ class Jetpack {
 			Jetpack_Network::init();
 
 			if( is_network_admin() )
-			    return; // End here to prevent single site actions from firing
+				return; // End here to prevent single site actions from firing
 		}
 
 
@@ -873,7 +873,7 @@ class Jetpack {
 	 *
 	 * @filter require_lib_dir
 	 */
-	function require_lib_dir( $lib_dir ) {
+	function require_lib_dir() {
 		return JETPACK__PLUGIN_DIR . '_inc/lib';
 	}
 
