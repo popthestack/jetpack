@@ -484,6 +484,9 @@ class Jetpack_Subscriptions {
 				case 'active': case 'pending':
 					$redirect = add_query_arg( 'subscribe', 'already' );
 					break;
+				case 'blocked_email':
+					$redirect = add_query_arg( 'subscribe', 'opted_out' );
+					break;
 				default:
 					$redirect = add_query_arg( 'subscribe', 'error' );
 					break;
@@ -672,6 +675,9 @@ class Jetpack_Subscriptions_Widget extends WP_Widget {
 			switch ( $_GET['subscribe'] ) :
 				case 'invalid_email' : ?>
 					<p class="error"><?php esc_html_e( 'The email you entered was invalid. Please check and try again.', 'jetpack' ); ?></p>
+				<?php break;
+				case 'opted_out' : ?>
+					<p class="error"><?php esc_html_e( 'The email address has opted out of subscription emails.', 'jetpack' ); ?></p>
 				<?php break;
 				case 'already' : ?>
 					<p class="error"><?php esc_html_e( 'You have already subscribed to this site. Please check your inbox.', 'jetpack' ); ?></p>
