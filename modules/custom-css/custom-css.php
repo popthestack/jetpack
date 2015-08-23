@@ -564,7 +564,7 @@ class Jetpack_Custom_CSS {
 	}
 
 	static function print_css() {
-		
+
 		/**
 		 * Fires right before printing the custom CSS inside the <head> element
 		 *
@@ -794,7 +794,7 @@ class Jetpack_Custom_CSS {
 		?>
 		<div class="wrap">
 			<?php
-			
+
 			/**
 			 * Fire right before the custom css page begins
 			 *
@@ -802,9 +802,9 @@ class Jetpack_Custom_CSS {
 			 * @module Custom_CSS
 			 **/
 			do_action( 'custom_design_header' );
-			
+
 			?>
-			<h2><?php _e( 'CSS Stylesheet Editor', 'jetpack' ); ?></h2>
+			<h1><?php _e( 'CSS Stylesheet Editor', 'jetpack' ); ?></h1>
 			<form id="safecssform" action="" method="post">
 				<?php wp_nonce_field( 'safecss' ) ?>
 				<?php wp_nonce_field( 'meta-box-order', 'meta-box-order-nonce', false ); ?>
@@ -814,7 +814,7 @@ class Jetpack_Custom_CSS {
 					<p class="css-support"><?php echo apply_filters( 'safecss_intro_text', __( 'New to CSS? Start with a <a href="http://www.htmldog.com/guides/cssbeginner/">beginner tutorial</a>. Questions?
 		Ask in the <a href="http://wordpress.org/support/forum/themes-and-templates">Themes and Templates forum</a>.', 'jetpack' ) ); ?></p>
 					<p class="css-support"><?php echo __( 'Note: Custom CSS will be reset when changing themes.', 'jetpack' ); ?></p>
-					
+
 					<div id="post-body" class="metabox-holder columns-2">
 						<div id="post-body-content">
 							<div class="postarea">
@@ -996,7 +996,7 @@ class Jetpack_Custom_CSS {
 					</div>
 				</div>
 				<?php
-				
+
 				/**
 				 * Allows addition of elements to the submit box for custom css
 				 * on the wp-admin side
@@ -1005,7 +1005,7 @@ class Jetpack_Custom_CSS {
 				 * @module Custom_CSS
 				 **/
 				do_action( 'custom_css_submitbox_misc_actions' );
-				
+
 				?>
 			</div>
 		</div>
@@ -1589,7 +1589,7 @@ function safecss_class() {
 		}
 
 		function postparse() {
-			
+
 			/**
 			 * Do actions after parsing the css
 			 *
